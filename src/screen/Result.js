@@ -28,10 +28,10 @@ function Result({ score }) {
       <Helmet>
       <meta property="og:title" content={questionsData.title} />
         <meta property="og:description" content={result.description ? result.description.text : ''} />
-        <meta property="og:image" content="https://i.ytimg.com/vi/eJEP5X0uC2E/maxresdefault.jpg" /> {/* Ensure this is the correct image variable */}
+        <meta property="og:image" content={level1Image} /> {/* Ensure this is the correct image variable */}
         <meta property="og:url" content="https://test-tool-rho.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="fb:app_id" content="87741124305" /> {/* Replace with your actual Facebook App ID */}
+        <meta property="fb:app_id" content="1384301575511797" /> {/* Replace with your actual Facebook App ID */}
       </Helmet>
       <h3 className="header__title">{questionsData.title}</h3>
       <div className="main">
