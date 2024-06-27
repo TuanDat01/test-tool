@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import questionsData from '../data.json';
-import level1Image from '../image/level1.jpg';
 import { Helmet } from 'react-helmet';
 import './instruct.css';
 
