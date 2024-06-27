@@ -1,0 +1,64 @@
+body{
+    background-color: #0d5093;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100% ;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    color:white;
+    margin-top: 50px;
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng của khung */
+
+
+}
+h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header__title{
+    padding: 15px 0px 35px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    border-width: 20px ;
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+.login__email{
+    margin-bottom: 20px;
+    padding: 8px;
+}
+.login__start{
+    cursor: pointer;
+    padding: 8px;
+    background-color: #1890ff;
+    color: white;
+    transition: opacity .2s ease;
+}
+.login__start:hover{
+    opacity: 0.8;
+}
+.login__img{
+    filter: invert(100%) brightness(200%);
+
+}
+.image{
+    margin-top: 20px;
+    border-radius: 20px;
+    
+}
+.image__avatar+.image__avatar{
+    margin-left: 25px;
+}
+

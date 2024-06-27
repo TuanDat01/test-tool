@@ -1,0 +1,97 @@
+body{
+    background-color: #0d4f93;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100% ;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : white;
+}
+
+.main {
+    background-color:#394d69;
+    padding: 35px; /* Điều chỉnh để tạo khoảng cách bên trong khung */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng của khung */
+    margin: 20px; /* Điều chỉnh khoảng cách xung quanh khung */
+    max-width: 500px; /* Đặt kích thước tối đa cho ul */
+
+    
+  }
+  ul{
+    text-align: left;
+    margin: 0 25px; /* Đảm bảo không có margin bên trái */
+    max-width: 350px; /* Đặt kích thước tối đa cho ul */
+
+  }
+li::marker {
+    color: #0d4f93; /* Đổi màu dấu chấm thành màu đỏ */
+  }
+  ul li::marker {
+    padding-bottom: 10px;
+    padding: 200px 200px;
+    color: white; /* Đổi màu dấu chấm thành màu đỏ */
+    margin-bottom: 10px; /* hoặc bất kỳ giá trị nào phù hợp */
+    line-height: 1.5; /* Điều chỉnh theo nhu cầu, ví dụ 1.5 là 150% của kích thước font hiện tại */
+
+    
+  }
+  .ans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+.ans__btn+.ans__btn{
+  margin-top: 20px;
+}
+.ans__btn {
+  padding: 10px 0px;
+  transition: background-color 0.3s, transform 0.3s, border 0.3s, color 0.3s;
+}
+
+.ans__btn--active {
+  border: 2px solid white; /* Viền trắng */
+  color: blue; /* Chữ xanh */
+  background-color: lightblue; /* Màu nền xanh nhạt */
+}
+
+.ans__btn:active {
+  background-color: #ddd; /* Màu nền khi nhấn */
+  transform: scale(0.98); /* Giảm kích thước để tạo cảm giác nhấn */
+}
+
+.change{
+  display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.change__previous{
+  background-color: white;
+  color: #47a7ff;
+  padding: 8px 25px;
+}
+.change__next{
+  background-color: #1890ff;
+  color: white;
+  padding: 8px 25px;
+}
+.main__result{
+  display: flex;
+  flex-direction: row;
+}
+.main__result__image{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  object-position: center;
+  margin: auto 20px;
+}
+.main__result__title{
+  text-align: left;
+}
+h5{
+  font-size: 13px;
+  font-weight: 400;
+}
