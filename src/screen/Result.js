@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import questionsData from '../data.json';
-import level1 from '../image/level1.jpg';
+import level1Image from '../image/level1.jpg';
 import { Helmet } from 'react-helmet';
 import './instruct.css';
 
@@ -26,11 +26,12 @@ function Result({ score }) {
   return (
     <div>
       <Helmet>
-        <meta property="og:title" content={questionsData.title} />
+      <meta property="og:title" content={questionsData.title} />
         <meta property="og:description" content={result.description ? result.description.text : ''} />
-        <meta property="og:image" content={level1} />
+        <meta property="og:image" content="https://i.ytimg.com/vi/eJEP5X0uC2E/maxresdefault.jpg" /> {/* Ensure this is the correct image variable */}
         <meta property="og:url" content="https://test-tool-rho.vercel.app/" />
         <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="87741124305" /> {/* Replace with your actual Facebook App ID */}
       </Helmet>
       <h3 className="header__title">{questionsData.title}</h3>
       <div className="main">
