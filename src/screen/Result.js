@@ -29,7 +29,7 @@ function Result({ score }) {
       <meta name="og:title" content="abc" />
         <meta property="og:description" content="abc"/>
         <meta property="og:image" content="https://share.redd.it/preview/post/sb3of2" /> {/* Ensure this is the correct image variable */}
-        <meta property="og:url" content="https://test-tool-rho.vercel.app/" />
+        <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
         <meta property="og:type" content="website" />
         <meta property="fb:app_id" content="1384301575511797" /> {/* Replace with your actual Facebook App ID */}
       </Helmet>
@@ -50,7 +50,7 @@ function Result({ score }) {
         <h2>{score}</h2>
         <h4>score</h4>
         <div className="fb-share-button" 
-          data-href="https://test-tool-rho.vercel.app/" 
+          data-href="https://test-tool-rho.vercel.app/result" 
           data-layout="button" 
           data-size="large">
           <a target="_blank" 
