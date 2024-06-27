@@ -24,7 +24,7 @@ function Home(){
         <img alt="img1" className="image__avatar image__avatar--top" height="95" width="175" src="https://img.pikbest.com/ai/illus_our/20230424/526a788f261e27159dd85660bce1a9b1.jpg!w700wp" />
         <img alt="img2" className="image__avatar image__avatar--bottom" height="95" width="175" src="https://img.pikbest.com/ai/illus_our/20230424/9aed3004e9a28793fb5954155f45257d.jpg!w700wp" />
       </div>
-      </div>
+    </div>
     
   )
 }
