@@ -7,7 +7,7 @@ import level4Image from '../image/level4.jpg';
 import level5Image from '../image/level5.jpg';
 import './instruct.css';
 import { useNavigate } from "react-router-dom";
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Result({ score }) {
   const [result, setResult] = useState({});
@@ -29,19 +29,31 @@ function Result({ score }) {
     }
   }, [result]);
 
+  // Function to determine the image URL based on result.level
+  const getImageUrl = (level) => {
+    switch (level) {
+      case 1:
+        return "https://baobinhdinh.vn/viewimage.aspx?imgid=253630";
+      case 2:
+        return level2Image;
+      case 3:
+        return level3Image;
+      case 4:
+        return level4Image;
+      default:
+        return level5Image;
+    }
+  };
+
+  const imageUrl = getImageUrl(result.level);
+
   return (
     <HelmetProvider>
       <div>
         <Helmet>
           <meta property="og:title" content="Test App" />
           <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
-          <meta property="og:image" content={
-            result.level === 1 ? "https://baobinhdinh.vn/viewimage.aspx?imgid=253630" :
-            result.level === 2 ? level2Image :
-            result.level === 3 ? level3Image :
-            result.level === 4 ? level4Image :
-            level5Image
-          } />
+          <meta property="og:image" content={imageUrl} />
           <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="1384301575511797" />
