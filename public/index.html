@@ -12,30 +12,36 @@
 
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  
+
   <!-- Include React build -->
-  <script src="/path/to/your/react/build.js"></script>
-  
+  <script src="/static/js/main.js"></script>
   <!-- Custom script to use 'result.level' and update og:image content -->
   <script>
     function updateOGImage(level) {
+      console.log("Function updateOGImage is called with level:", level);
       var ogImageMeta = document.querySelector('meta[property="og:image"]');
-      if (level === 1) {
-        ogImageMeta.setAttribute('content', '/level1.jpg');
-      } else if (level === 2) {
-        ogImageMeta.setAttribute('content', '/level2.jpg');
+      if (ogImageMeta) {
+        if (level === 1) {
+          ogImageMeta.setAttribute('content', '/level1.jpg');
+        } else if (level === 2) {
+          ogImageMeta.setAttribute('content', '/level2.jpg');
+        } else {
+          ogImageMeta.setAttribute('content', '/level2.jpg');
+        }
+        console.log("aaaa");
       } else {
-        // Default or handle other cases if needed
-        ogImageMeta.setAttribute('content', '/default_image.jpg');
+        console.error("Meta tag with property 'og:image' not found.");
       }
     }
-
-    // Function to receive level from React and update og:image
-    function receiveLevel(level) {
-      window.setGlobalLevel(level);
+  
+    function receiveLevelFromReact(level) {
       updateOGImage(level);
     }
+  
+    // Example: Call receiveLevelFromReact with a sample level
+    // receiveLevelFromReact(1); // Uncomment and replace with actual level value
   </script>
+  
 
   <title>Test App</title>
 </head>
