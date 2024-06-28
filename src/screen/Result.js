@@ -34,9 +34,9 @@ function Result({ score }) {
                 <meta property="og:title" content="Test App" />
                 <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
                 <meta property="og:image" content={
-                    result.level === 1 ? level1Image :
-                    result.level === 2 ? level2Image :
-                    result.level === 3 ? level3Image :
+                    result.level === 1 ? "../image/level1.jpg" :
+                    result.level === 2 ? "../image/level2.jpg" :
+                    result.level === 3 ? "../image/level3.jpg" :
                     result.level === 4 ? level4Image :
                                     level5Image
                 } />
