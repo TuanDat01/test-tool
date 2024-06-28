@@ -21,7 +21,13 @@ function Result({ score }) {
     };
     Find(score);
   }, [score]);
-
+  useEffect(() => {
+    // Function to set level in global scope
+    window.setGlobalLevel = (level) => {
+      // Access level here and do whatever you need with it
+      console.log('Global level:', level);
+    };
+  }, [result]);
   useEffect(() => {
     if (window.FB) {
       window.FB.XFBML.parse();
