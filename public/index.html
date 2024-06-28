@@ -12,18 +12,36 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+  <title>Test App</title> 
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root" data-level="3"></div> <!-- Đảm bảo có thuộc tính data-level -->
   <script src="%PUBLIC_URL%/result.js"></script>
   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const rootDiv = document.getElementById("root");
+      const level = rootDiv.getAttribute("data-level");
+      receiveLevelFromReact(parseInt(level)); // Chuyển đổi thành số nguyên trước khi gọi hàm
+    });
+    
     function updateOGImage(level) {
       console.log("Function updateOGImage is called with level:", level);
       var ogImageMeta = document.querySelector('meta[property="og:image"]');
       if (ogImageMeta) {
-        if (level === 1) {
-          ogImageMeta.setAttribute('content', '/level1.jpg');
-        } else if (level === 2) {
-          ogImageMeta.setAttribute('content', '/level2.jpg');
-        } else {
-          ogImageMeta.setAttribute('content', '/level3.jpg');
+        switch (level) {
+          case 1:
+            ogImageMeta.setAttribute('content', '/level1.jpg');
+            break;
+          case 2:
+            ogImageMeta.setAttribute('content', '/level2.jpg');
+            break;
+          case 3:
+            ogImageMeta.setAttribute('content', '/level3.jpg');
+            break;
+          default:
+            console.error("Unexpected level value:", level);
+            break;
         }
         console.log("aaaa");
       } else {
@@ -35,12 +53,5 @@
       updateOGImage(level);
     }
   </script>
-  
-
-  <title>Test App</title> 
-</head>
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
 </body>
 </html>
