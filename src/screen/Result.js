@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import questionsData from '../data.json';
 import level1Image from '../image/level1.jpg';
@@ -7,66 +6,47 @@ import level3Image from '../image/level3.jpg';
 import level4Image from '../image/level4.jpg';
 import level5Image from '../image/level5.jpg';
 import './instruct.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useEffect,useState } from 'react';
 
 function Result({ score }) {
   const [result, setResult] = useState({});
-  const [check, setCheck] = useState(0); // Correct useState declaration
   const navigate = useNavigate();
 
   useEffect(() => {
-    const findResult = (score) => {
+    const Find = (score) => {
       let checkResult = questionsData.results.filter(
-        (item) => score > item.range[0] && score < item.range[1]
+        (item) => score >= item.range[0] && score <= item.range[1]
       );
       setResult(checkResult[0]);
     };
-    findResult(score);
+    Find(score);
   }, [score]);
 
   useEffect(() => {
     if (window.FB) {
       window.FB.XFBML.parse();
     }
-    if (result.level) {
-      setCheck(result.level); // Update check when result.level changes
-    }
   }, [result]);
-
-  // Function to determine the image URL based on result.level
-  const getImageUrl = (level) => {
-    switch (level) {
-      case 1:
-        return level1Image;
-      case 2:
-        return level2Image;
-      case 3:
-        return level3Image;
-      case 4:
-        return level4Image;
-      default:
-        return level5Image;
-    }
-  };
-
-  const imageUrl = getImageUrl(result.level);
 
   return (
     <HelmetProvider>
       <div>
         <Helmet>
           <meta property="og:title" content="Test App" />
-          <meta
-            property="og:description"
-            content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng"
-          />
-          <meta property="og:image" content={imageUrl} />
+          <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
+          <meta property="og:image" content={
+            result.level === 1 ? level1Image :
+            result.level === 2 ? level2Image :
+            result.level === 3 ? level3Image :
+            result.level === 4 ? level4Image :
+            level5Image
+          } />
           <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="1384301575511797" />
         </Helmet>
         <h3 className="header__title">{questionsData.title}</h3>
-        <div id="root" data-level={check}></div> {/* Ensure data-level attribute is set */}
         <div className="main">
           <div className="main__result">
             <img
@@ -82,9 +62,7 @@ function Result({ score }) {
           {result && result.description && <h5>{result.description.text}</h5>}
           <h2>{score}</h2>
           <h4>score</h4>
-          <button onClick={() => navigate('/share', { state: { level: result.level } })}>
-            Share
-          </button>
+          <button className='btnshare__social' onClick={() => { navigate("/share", { state: { level: result.level } }) }}>Share</button>
         </div>
       </div>
     </HelmetProvider>

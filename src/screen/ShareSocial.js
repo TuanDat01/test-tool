@@ -14,7 +14,6 @@ function ShareCocial() {
             <div className="share">
                 <h3>Chia sẻ kết quả</h3>
                 <h5>Đây là một số cách bạn có thể chia sẻ với đồng nghiệp của mình</h5>
-                <h1>{level}</h1>
                 <div className="btnshare">
                     <button className="btnshare__social"
                         data-href="https://test-tool-rho.vercel.app/result"
