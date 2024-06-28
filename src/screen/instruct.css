@@ -95,3 +95,33 @@ h5{
   font-size: 13px;
   font-weight: 400;
 }
+.btnshare__social{
+  padding: 8px;
+  background-color: #e9f4ff;
+  border: thin;
+  color: #1890ff;
+}
+.btnshare__social+.btnshare__social{
+  margin-top: 20px;
+}
+.cancel{
+  display: block;
+  margin-top: 20px;
+  color: #1890ff;
+}
+.share{
+  background-color:white;
+  padding: 35px; /* Điều chỉnh để tạo khoảng cách bên trong khung */
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng của khung */
+  margin: 50px; /* Điều chỉnh khoảng cách xung quanh khung */
+  max-width: 500px; /* Đặt kích thước tối đa cho ul */
+  color:black
+}
+.btnshare{
+  display: flex;
+  flex-direction: column;
+}
+.btnshare :hover{
+  background-color: #1890ff;
+  color: white;
+}

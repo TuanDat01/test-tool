@@ -4,6 +4,7 @@ import { Link,Routes,Route ,useNavigate, useLocation} from "react-router-dom";
 import Question from "./screen/Question";
 import Result from "./screen/Result";
 import { useEffect, useState } from "react";
+import ShareCocial from "./screen/ShareSocial";
 function App() {
   const navigate = useNavigate();
   const [id,setId] = useState(1);
@@ -48,6 +49,7 @@ function App() {
       <Route path="/instruct" element={<Instruct StartQuestion={StartQuestion} />}/>
       <Route path="/question" element={<Question id={id} NextQuestion={NextQuestion} PreviousQuestion={PreviousQuestion} Calculate={Calculate}/>}/>
       <Route path="/result" element={<Result score={score}/>}/>
+      <Route path ="/share" element={<ShareCocial/>}/>
     </Routes>
   )
 }
