@@ -11,28 +11,28 @@ body{
 
 .main {
     background-color:#394d69;
-    padding: 35px; /* Điều chỉnh để tạo khoảng cách bên trong khung */
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng của khung */
-    margin: 20px; /* Điều chỉnh khoảng cách xung quanh khung */
-    max-width: 500px; /* Đặt kích thước tối đa cho ul */
+    padding: 35px; 
+    box-sizing: border-box;
+    margin: 20px; 
+    max-width: 500px;
 
     
   }
   ul{
     text-align: left;
-    margin: 0 25px; /* Đảm bảo không có margin bên trái */
-    max-width: 350px; /* Đặt kích thước tối đa cho ul */
+    margin: 0 25px;
+    max-width: 350px; 
 
   }
 li::marker {
-    color: #0d4f93; /* Đổi màu dấu chấm thành màu đỏ */
+    color: #0d4f93;
   }
   ul li::marker {
     padding-bottom: 10px;
     padding: 200px 200px;
-    color: white; /* Đổi màu dấu chấm thành màu đỏ */
-    margin-bottom: 10px; /* hoặc bất kỳ giá trị nào phù hợp */
-    line-height: 1.5; /* Điều chỉnh theo nhu cầu, ví dụ 1.5 là 150% của kích thước font hiện tại */
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.5;
 
     
   }
@@ -50,14 +50,14 @@ li::marker {
 }
 
 .ans__btn--active {
-  border: 2px solid white; /* Viền trắng */
-  color: blue; /* Chữ xanh */
-  background-color: lightblue; /* Màu nền xanh nhạt */
+  border: 2px solid white; 
+  color: blue; 
+  background-color: lightblue;
 }
 
 .ans__btn:active {
-  background-color: #ddd; /* Màu nền khi nhấn */
-  transform: scale(0.98); /* Giảm kích thước để tạo cảm giác nhấn */
+  background-color: #ddd; 
+  transform: scale(0.98); 
 }
 
 .change{
@@ -111,10 +111,10 @@ h5{
 }
 .share{
   background-color:white;
-  padding: 35px; /* Điều chỉnh để tạo khoảng cách bên trong khung */
-  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng của khung */
-  margin: 50px; /* Điều chỉnh khoảng cách xung quanh khung */
-  max-width: 500px; /* Đặt kích thước tối đa cho ul */
+  padding: 35px; 
+  box-sizing: border-box; 
+  margin: 50px;
+  max-width: 500px;
   color:black
 }
 .btnshare{
@@ -125,3 +125,58 @@ h5{
   background-color: #1890ff;
   color: white;
 }
+.header{
+  color:white;
+  margin-top: 50px;
+  box-sizing: border-box; 
+
+
+}
+h3{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.header__title{
+  padding: 15px 0px 35px 0px;
+  text-transform: uppercase;
+  text-align: center;
+  border-width: 20px ;
+  max-width: 300px;
+  text-align: center;
+  margin: auto;
+
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  
+}
+.login__email{
+  margin-bottom: 20px;
+  padding: 8px;
+}
+.login__start{
+  cursor: pointer;
+  padding: 8px;
+  background-color: #1890ff;
+  color: white;
+  transition: opacity .2s ease;
+}
+.login__start:hover{
+  opacity: 0.8;
+}
+.login__img{
+  filter: invert(100%) brightness(200%);
+
+}
+.image{
+  margin-top: 20px;
+  border-radius: 20px;
+  
+}
+.image__avatar+.image__avatar{
+  margin-left: 25px;
+}
+

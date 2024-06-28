@@ -1,6 +1,6 @@
 import questionsData from '../data.json'
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
-import './home.css'
+import { useNavigate } from "react-router-dom";
+import './Page.css'
 function Home() {
   const navigate = useNavigate();
   const screenWidth = window.innerWidth;

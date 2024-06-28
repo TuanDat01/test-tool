@@ -5,9 +5,9 @@ import level2Image from '../image/level2.jpg';
 import level3Image from '../image/level3.jpg';
 import level4Image from '../image/level4.jpg';
 import level5Image from '../image/level5.jpg';
-import './instruct.css';
+import './Page.css';
 import { useNavigate } from "react-router-dom";
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Result({ score }) {
   const [result, setResult] = useState({});
@@ -37,10 +37,10 @@ function Result({ score }) {
           <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
           <meta property="og:image" content={
             result.level === 1 ? level1Image :
-            result.level === 2 ? level2Image :
-            result.level === 3 ? level3Image :
-            result.level === 4 ? level4Image :
-            level5Image
+              result.level === 2 ? level2Image :
+                result.level === 3 ? level3Image :
+                  result.level === 4 ? level4Image :
+                    level5Image
           } />
           <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
           <meta property="og:type" content="website" />
