@@ -1,12 +1,9 @@
-import { useLocation } from "react-router-dom";
-
-function ShareCocial() {
-    const location = useLocation();
-    const level = location.state?.level || 0
+function ShareSocial() {
     const handleFacebookShare = () => {
         window.open(
             "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftest-tool-rho.vercel.app%2Fresult&amp;src=sdkpreparse"
-        );    };
+        );
+    };
     return (
         <div>
             <div id="fb-root"></div>
@@ -28,4 +25,4 @@ function ShareCocial() {
         </div>
     )
 }
-export default ShareCocial
+export default ShareSocial

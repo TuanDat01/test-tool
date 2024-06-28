@@ -1,12 +1,6 @@
 import questionsData from '../data.json'
-import { Link,Routes,Route,useNavigate  } from "react-router-dom";
-
 import './instruct.css'
 function Instruct({StartQuestion}){
-
-  // const StartQuestion=()=>{
-  //     navigate("/question/id=1",1)
-  // }
   return (
     <div>
         <h3 className='header__title'>{questionsData.title}</h3>
