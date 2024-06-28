@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import questionsData from '../data.json';
 import level1Image from '../image/level1.jpg';
+import level2Image from '../image/level2.jpg';
+import level3Image from '../image/level3.jpg';
+import level4Image from '../image/level4.jpg';
+import level5Image from '../image/level5.jpg';
 import { Helmet } from 'react-helmet';
 import './instruct.css';
 import { useNavigate  } from "react-router-dom";
@@ -26,6 +30,20 @@ function Result({ score }) {
 
   return (
     <div>
+      <Helmet>
+                <meta property="og:title" content="Test App" />
+                <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
+                <meta property="og:image" content={
+                    result.level === 1 ? level1Image :
+                    result.level === 2 ? level2Image :
+                    result.level === 3 ? level3Image :
+                    result.level === 4 ? level4Image :
+                                    level5Image
+                } />
+                <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
+                <meta property="og:type" content="website" />
+                <meta property="fb:app_id" content="1384301575511797" /> {/* Replace with your actual Facebook App ID */}
+            </Helmet>
       <h3 className="header__title">{questionsData.title}</h3>
       <div className="main">
         <div className="main__result">
