@@ -31,7 +31,7 @@ function Question({ NextQuestion, PreviousQuestion, Calculate }) {
       <h3 className='header__title'>{questionsData.title}</h3>
       <div className='main'>
         <li>Câu hỏi {id}/10</li>
-        <h2 style={{ maxWidth: `${screenWidth * 0.25}px` }}>{question.title}</h2>
+        <h2 style={{ maxWidth: "382px"}}>{question.title}</h2>
         <div className='ans'>
           {question.options && question.options.length > 0 && question.options.map((option, index) => (
             <button

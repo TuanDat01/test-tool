@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import './Page.css'
 function Home() {
   const navigate = useNavigate();
-  const screenWidth = window.innerWidth;
-  console.log(screenWidth)
   const StartClick = () => {
     navigate('/instruct');
 
@@ -13,8 +11,8 @@ function Home() {
     <div>
       <div className='header'>
         <h3 className='header__title'>{questionsData.title}</h3>
-        <h1 style={{ maxWidth: `${screenWidth * 0.25}px` }}>Công ty bạn trưởng thành như thế nào trong việc lắng nghe khách hàng?</h1>
-        <h3 style={{ maxWidth: `${screenWidth * 0.25}px` }}> Đánh giá khả năng của bạn trong việc lắng nghe, hiểu và đáp ứng các tín hiệu từ khách hàng </h3>
+        <h1 style={{ width:"382px"}}>Công ty bạn trưởng thành như thế nào trong việc lắng nghe khách hàng?</h1>
+        <h3 style={{ width:"382px" }}> Đánh giá khả năng của bạn trong việc lắng nghe, hiểu và đáp ứng các tín hiệu từ khách hàng </h3>
       </div>
       <div className='login'>
         <input className='login__email' placeholder='Địa chỉ email của bạn' />

@@ -21,20 +21,12 @@ body{
   ul{
     text-align: left;
     margin: 0 25px;
-    max-width: 350px; 
-
   }
 li::marker {
     color: #0d4f93;
   }
   ul li::marker {
-    padding-bottom: 10px;
-    padding: 200px 200px;
     color: white;
-    margin-bottom: 10px;
-    line-height: 1.5;
-
-    
   }
   .ans{
     display: flex;
@@ -140,10 +132,8 @@ h3{
 .header__title{
   padding: 15px 0px 35px 0px;
   text-transform: uppercase;
-  text-align: center;
   border-width: 20px ;
   max-width: 300px;
-  text-align: center;
   margin: auto;
 
 }

@@ -12,16 +12,16 @@ function App() {
   const searchParams = new URLSearchParams(location.search);
   const idnew = parseInt(searchParams.get("id"));
   const [score,setScore] = useState(0)
+
   const StartQuestion=()=>{
     navigate(`/question?id=${id}`)
   }
-  const NextQuestion=()=>{
 
-    setId(idnew); // Tăng giá trị ID lên 1 và cập nhật state
+  const NextQuestion=()=>{
+    setId(idnew); 
     if(idnew+1===11)
       {
         navigate("/result")
-        setId(prevId => prevId+1)
       }
     else
       navigate(`/question?id=${idnew+1}`)
