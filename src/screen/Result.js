@@ -33,15 +33,15 @@ function Result({ score }) {
     <HelmetProvider>
       <div>
         <Helmet>
-          <meta property="og:title" content="Test App" />
-          <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
-          <meta property="og:image" content={
+        <meta property="og:image" content={
             result.level === 1 ? level1Image :
               result.level === 2 ? level2Image :
                 result.level === 3 ? level3Image :
                   result.level === 4 ? level4Image :
                     level5Image
           } />
+          <meta property="og:title" content="Test App Version 2" />
+          <meta property="og:description" content="Đánh giá mức độ trưởng thành về quản trị trải nghiệm khách hàng" />
           <meta property="og:url" content="https://test-tool-rho.vercel.app/result" />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="1384301575511797" />
